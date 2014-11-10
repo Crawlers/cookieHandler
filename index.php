@@ -76,6 +76,12 @@ if (isset($_GET['newsfordate'])){
         }
         unlink($tmpfname);
 }
+else{
+        echo "proxy for cookie handing is working<br>";
+        echo "use a URL with format '<a><b>http://".$_SERVER[HTTP_HOST].$_SERVER['REQUEST_URI']."?newsfordate=date/month/year</b></a>' to browse news for different dates<br>";
+        $url = "http://".$_SERVER[HTTP_HOST].$_SERVER['REQUEST_URI']."?newsfordate=1/1/2013";
+        echo "eg: '<a href='".$url."'><b>".$url."</b>'</a><br>";
+}
 ?>
 </body>
 </html>
